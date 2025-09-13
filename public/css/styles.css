@@ -4,3 +4,144 @@
 *:after {
   box-sizing: border-box;
 }
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.siteName {
+  text-decoration: none;
+  font-size: 2em;
+  display: flex;
+  justify-content: space-between;
+}
+
+#tools a,
+.siteName a {
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  background-color: navy;
+  color: beige;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 1rem;
+  list-style-type: none;
+}
+
+section img {
+  position: absolute;
+  max-width: 900px;
+  width: 100%;
+}
+
+section {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  padding: 20px;
+}
+
+section div {
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  color: black;
+  top: 20px;
+  left: 20px;
+  max-width: 300px;
+}
+
+section a {
+  padding: 1rem;
+  background-color: aqua;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.reviews li {
+  margin: 0.5rem 0;
+}
+
+.upgrades {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card {
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: aqua;
+  text-align: center;
+  border: 1px solid black;
+  margin: 0.5rem;
+}
+
+.card img {
+  margin: 0 auto;
+}
+
+.card figcaption {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    background-image: url(../images/site/checkerboard.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  #wrapper {
+    background-color: white;
+    border: 5px solid aqua;
+    border-radius: 20px;
+    padding: 1rem;
+    max-width: 900px;
+    margin: 1rem auto;
+  }
+
+  nav ul li {
+    padding: 1rem 6%;
+    margin: 0;
+  }
+
+  nav ul {
+    margin: 1rem 0;
+  }
+
+  .container {
+    display: grid;
+    grid-template-areas:
+      "rev up"
+      "Upgrades Reviews";
+  }
+
+  .upgrades {
+    grid-area: Upgrades;
+  }
+
+  .container h2:first-of-type {
+    grid-area: up;
+  }
+
+  .container h2:nth-of-type(2) {
+    grid-area: rev;
+  }
+
+  .reviews {
+    grid-area: Reviews;
+  }
+}
